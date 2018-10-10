@@ -1,0 +1,138 @@
+$rem-fallback: true;
+$rem-baseline: 10px;
+html {
+    @include rem-baseline; // Default zoom to 100%
+    @media (max-width: 400px) {
+        @include rem-baseline(75%);
+    }
+}
+html, body {
+    height: 100%;
+}
+body, html, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Zilla Slab', serif;
+}
+body {
+    @include rem(font-size, 16px);
+    font-family: 'Zilla Slab', serif;
+}
+.main-wrapper {
+    max-width: 1366px;
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.col-mm-2 {
+    @include respond-to(400px, 767px) {
+        width: 50%;
+    }
+}
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.row-no-padding {
+    [class*="col-"] {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+.row-padding {
+    margin-left: -6px;
+    margin-right: -6px;
+    div[class*="col"] {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+.row-padding-30 {
+    @include respond-to($media-sm) {
+        margin-left: -30px;
+        margin-right: -30px;
+        div[class*="col"] {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+
+.breadcrumb {    
+    background-color: transparent;
+    border-radius: 0;    
+    padding: 15px;
+    margin: 0;
+    li {
+        font-size: 14px;
+    }
+}
+
+.slick-prev, .slick-next {
+    z-index: 99;    
+    width: 20px;
+    height: 20px;  
+    @include respond-to(768px) {
+        width: 48px;
+        height: 48px;   
+    }
+}
+
+.slick-prev:before, .slick-next:before {
+    display: none;
+}
+
+.slick-prev, .slick-prev:hover, .slick-prev:focus {
+    left: 30px;
+    background: url("../img/left-arrow.png") 0 0 no-repeat;
+    background-size: contain;
+}
+.slick-next, .slick-next:hover, .slick-next:focus {
+    right: 30px;
+    background: url("../img/right-arrow.png") 0 0 no-repeat;
+    background-size: contain;
+}
+
+.btn {
+    padding: 8px 50px;    
+    @include rem(font-size, 22px);
+    text-transform: uppercase;
+    &-blue {
+        background-color: #353f63;
+        border: none;
+        &:hover {
+            background-color: darken(#353f63, 10);
+        }
+    }
+}
+
+.blue-border, .blue-border:hover {
+    border: 1px solid #9a9fb1;
+
+}
+
+.medium-col {
+    @include respond-to(400px,  767px) {
+        width: 50%;
+    }
+}
+
+.col-3 {
+    @include respond-to(400px,  767px) {
+        width: 33.33333333333333%;
+    }
+}
+
+.parallax { 
+    /* The image used */
+    background-image: url("../img/fixed-bg.jpg");
+
+    /* Set a specific height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,33 @@
+.experience-section {
+	position: relative;
+}
+
+.experience-zone {
+	max-width: 100%;
+	position: relative;
+	top: 0;
+	background-color: #353f63;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	@include respond-to(768px) {
+		position: absolute;
+		top: 40px;
+		right: 100px;   
+		max-width: 530px;     
+    }
+	@include rem(padding, 30px);
+	h2 {
+        @include rem(font-size, 40px);
+        font-weight: 800;        
+        text-transform: uppercase;
+        color: #fff;
+        @include rem(margin-bottom, 20px);
+    }
+
+    p {
+    	line-height: 1.5;
+    	 @include rem(margin-bottom, 30px);
+    }
+}
+

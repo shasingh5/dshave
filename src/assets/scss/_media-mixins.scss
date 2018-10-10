@@ -1,0 +1,129 @@
+$pink : #ff5573;
+$darkpink : #c2506b;
+$white : #fff;
+$black : #222222;
+$grey : #444444;
+$orange : #ff4000;
+$openSans : 'Open Sans', sans-serif;
+$media-mob: 400px;
+$media-xs: 767px;
+$media-sm: 768px;
+$media-md: 992px;
+$media-lg: 1200px;
+
+@mixin respond-to($val, $val2: none) {
+    @if $val2==none {
+        @media (min-width: $val) {
+            @content;
+        }
+    }
+    @else if $val2==max {
+        @media (max-width: $val) {
+            @content;
+        }
+    }
+    @else {
+        @media (min-width: $val) and (max-width: $val2) {
+            @content;
+        }
+    }
+}
+@mixin vendor-prefixes($property, $value) {
+    @each $prop in "-webkit-", "-moz-", "-ms-", "-o-", "" {
+        #{$prop}#{$property}: $value;
+    }
+}
+@mixin ie9-plus() {
+    @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+        // IE9+ CSS
+        @content;
+    }
+}
+@mixin multiline-text($font-size, $line-height, $lines-to-show) {
+    display: block;
+    /* Fallback for non-webkit */
+    display: -webkit-box;
+    height: $font-size * $line-height * $lines-to-show;
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// Assuming the parent element has position: relative;
+@mixin centerer($horizontal: true, $vertical: true) {
+    position: absolute;
+
+    @if $horizontal and $vertical {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @else if $horizontal {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    @else if $vertical {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+
+//@include centerer; horizontal - @include center(true, false); vertical - @include center(false, true);
+
+@mixin breakpoint($point) {
+  @if $point == 'vvxs' {
+    @media screen and (max-width: 330px) {
+       @content;
+    }
+  }
+  @if $point == 'vxs' {
+    @media screen and (max-width: 380px) {
+       @content;
+    }
+  }
+
+  @if $point == 'xs' {
+    @media screen and (max-width: 768px) {
+       @content;
+    }
+  }
+
+  @else if $point == 'sm' {
+    @media screen and (max-width: 991px) {
+       @content;
+    }
+  }
+
+  @else if $point == 'xsUp' {
+    @media screen and (min-width: 769px) {
+       @content;
+    }
+  }
+
+  @else if $point == 'xsBelow' {
+    @media screen and (max-width: 767px) {
+       @content;
+    }
+  }
+
+  @else if $point == 'xsAndUp' {
+    @media screen and (min-width: 768px) {
+       @content;
+    }
+  }
+
+  @else if $point == 'md' {
+    @media screen and (max-width: 1199px) {
+       @content;
+    }
+  }
+
+  @else if $point == 'lg' {
+    @media screen and (min-width: 1200px) {
+       @content;
+    }
+  }
+}

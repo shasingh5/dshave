@@ -1,0 +1,174 @@
+.about-tab {
+    background-color: #0e1843;
+    border-bottom: 3px solid darken(#0e1843, 10);
+    color: #fff;
+    
+    width: 100%;
+	@include respond-to(767px, max) {
+        overflow-x: auto;
+    }
+    ul {
+        width: 920px;
+        font-size: 0;
+        display: block;
+        text-align: center;
+
+        @include respond-to(768px) {
+            width: 100%;
+        }
+
+
+        li {
+            display: inline-block;
+            width: 12.5%;
+
+            @include rem(padding, 20px);
+            @include rem(font-size, 15px);
+
+            font-weight: 300;
+            text-align: center;
+            vertical-align: top;
+            transition: all 0.3s ease;
+
+            &.active, &:hover {
+                background-color: darken(#0e1843, 10);
+                color: #222;
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+                min-height: 75px;
+                line-height: 1.4;
+
+                @include respond-to(768px) {
+                    min-height: 90px;
+                }
+
+
+                img {
+                    display: inline-block;
+                }
+
+                span {
+                    color: #fff;
+                    display: block;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+
+    &.sub-tab {
+        background-color: #F9F9F9;
+        border-bottom: 1px solid #cccccc;
+
+        li {
+            width: 11.11111111111111%;
+            text-transform: uppercase;
+
+            padding: 0;
+            @include rem(font-size, 12px);
+
+            border-right: 1px solid #ccc;
+            &.active, &:hover  {
+                background-color: #ccc;
+                color: #000;
+                
+    			a:before, a:before {
+    				width: 100%;
+    				left: 0;
+    			}
+            }
+
+            a {
+                min-height: 40px;
+				position: relative;
+				@include rem(padding, 10px);
+				@include respond-to(768px) {
+                    min-height: 52px;
+                }
+                &:before {
+                    height: 3px;
+                    background: #050919;
+                    position: absolute;
+                    bottom: -1px;
+                    left: 50%;
+                    content: '';
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 0;
+                }
+
+                span {
+                    padding-top: 0;
+                    color: #333;
+                }
+            }
+        }
+    }
+}
+
+.about-wrapper {
+    margin: 40px 0;
+}
+
+.about-comrade {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.4;
+
+    h1 {
+        @include rem(font-size, 30px);
+
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        color: #050919;
+    }
+
+    p {
+        line-height: 1.6;
+        color: #666;
+    }
+}
+
+.about-company {
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    padding: 20px;
+
+    h3 {
+        @include rem(font-size, 18px);
+
+        line-height: 1.4;
+        color: #050919;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    p {
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 20px;
+    }
+}
+
+.social-resp {
+    margin: 20px 0;
+
+    h3 {
+        @include rem(font-size, 24px);
+
+        font-weight: 300;
+        line-height: 1.4;
+        color: #050919;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 20px;
+    }
+}

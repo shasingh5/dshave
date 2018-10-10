@@ -1,0 +1,49 @@
+.services-section {
+	position: relative;
+	background-color: #000;
+	color: #fff;
+	@include rem(padding, 100px 0 80px);
+
+	h1 {
+		@include rem(font-size, 32px);
+		font-weight: 700;
+		line-height: 1.2;
+		letter-spacing: 3px;
+		@include rem(margin-bottom, 20px);
+		text-align: center;
+		text-decoration: underline #f47920;
+		text-underline-position: under
+	}
+
+	p {
+		@include rem(font-size, 26px);
+		max-width: 885px;
+		line-height: 1.4;
+		margin: 0 auto;
+		text-align: center;
+		@include rem(margin-bottom, 70px);
+	}
+}
+
+.services-list {
+	@include rem(margin-bottom, 30px);
+	h3 {
+		@include rem(font-size, 28px);
+		text-transform: uppercase;
+		font-weight: 700;
+		line-height: 1.2;
+		letter-spacing: 3px;
+		@include rem(margin-top, 30px);
+		text-align: center;		
+	}
+}
+
+.book-cta {
+	@include rem(margin-top, 50px);
+}
+
+.work-wrapper {
+	max-width: 1060px;
+	margin: 0 auto;
+	@include rem(margin-top, 50px);
+}

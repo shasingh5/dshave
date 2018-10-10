@@ -1,0 +1,28 @@
+.logo {
+  background: #000 url('../img/header-bg.jpg') 0 0 no-repeat;
+  min-height: 140px;
+  text-align: center;
+  @include rem(padding, 28px 0);
+  img {
+    display: inline-block;
+  }
+}
+
+.nav {
+  background-color: #fff;
+  min-height: 40px;
+  ul {
+    text-align: center;
+    font-size: 0;
+    li {
+      display: inline-block;
+      @include rem(font-size, 20px);
+      font-weight: 500;
+      @include rem(padding, 10px 55px);
+      text-transform: uppercase;
+      a {
+        color: #000000;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>
+      {{#if title}}
+        {{title}}
+      {{else}}
+        Welcome to Comrade
+      {{/if}}
+    </title>
+    {{> styles}}
+  </head>
+  <body>
+    {{> nav }}   
+    {{> about-comrade }}  
+    {{!-- {{> product-detail }}     --}}
+    {{> footer }}
+    {{> scripts }}
+  </body> 
+</html>
