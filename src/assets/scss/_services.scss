@@ -12,7 +12,8 @@
 		@include rem(margin-bottom, 20px);
 		text-align: center;
 		text-decoration: underline #f47920;
-		text-underline-position: under
+		text-underline-position: under;
+		text-transform: uppercase;
 	}
 
 	p {
