@@ -1,57 +1,71 @@
-.main-footer {
-    background-color: #ebe9f0;
-    color: #000;
-    @include rem(padding, 25px 0);
-    h4 {
-        color: #000;
-        font-weight: 600;
-        @include rem(font-size, 14px);
-        @include rem(margin-bottom, 10px);
-        margin-top: 15px;
-        @include respond-to(768px) {
-            margin-top: 0;
-        }
-    }
-}
-
-.grey-footer {
-    background-color: #ebe9f0;
-    color: #000;
-    @include rem(padding, 20px 0);
-}
-
-ul.sitemap {
-    li {
-        a {
-            color: #6d6c6f;
-            @include rem(font-size, 14px);
-            font-weight: 300;
-            display: inline-block;
-            @include rem(padding, 8px 0);
-        }
-    }
-}
 
 .bottom-footer {
+    background-color: #2e2d2c;
+    color: #fff;
+    @include rem(padding, 24px 0);
 
     p {
-        @include rem(font-size, 12px);
-        line-height: 1.5;
-        color: #666;
-        @include rem(margin-top, 5px);
+        @include rem(font-size, 10px);
+        font-weight: 300;
+        line-height: 2;
+        color: #fff;
+        text-transform: uppercase;
+        @include rem(margin-top, 15px);
+        text-align: center;
+        @include respond-to(768px) {
+           @include rem(margin-top, 7px);
+        }
+    }
+}
+
+.footer-nav {
+    @include rem(margin-top, 7px);
+    li {        
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 0.9;
+        @include rem(font-size, 10px);
+        text-transform: uppercase;
+        font-weight: 300;
+        a {
+            color: #fff;
+            @include rem(padding, 0 9px);
+            display: block;
+            border-left: 1px solid #f97a21;
+            @include respond-to(768px) {
+               @include rem(padding, 0 18px);
+            }
+        }
+
+        &:first-child a {
+            border-left: none;
+        }
+    }
+
+}
+
+.footer-align {
+    text-align: center;
+    
+    @include respond-to(768px) {
+       text-align: right;
+       
     }
 }
 
 .social-follow {
-    text-align: right;
-    ul {
-        margin-top: 5px;
-        @include respond-to(768px) {
-            margin-top: 24px;
-        }
+    text-align: center;
+    @include rem(margin-top, 15px);
+    @include respond-to(768px) {
+       text-align: right;
+       margin-top: 0;
+    }
+    ul {        
+        font-size: 0;
         li {
-            width: 32px;
-            height: 32px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             border: 1px solid #2f2e32;
             display: inline-block;

@@ -6,23 +6,37 @@
 
 .barher-inner {
 	position: absolute;
-	top: 160px;
+	top: 15px;
 	left: 50%;
 	@include vendor-prefixes(transform, translate(-50%, 0));
 	text-align: center;
+	@include respond-to(768px) {
+       top: 160px;
+    }
 
 	img {
 		display: inline-block;
 	}
 
 	h1 {
-		@include rem(font-size, 90px);
+		@include rem(font-size, 40px);
 		font-weight: 700;
-		line-height: 1.2;
+		line-height: 1;
 		letter-spacing: 5px;
 		text-decoration: line-through #f47920;
-		text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-		width: 535px;
-		@include rem(margin-bottom, 70px);
+		text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);		
+		
+	    margin: 0 auto;
+		@include rem(margin-bottom, 20px);
+		@include respond-to(768px) {
+	       @include rem(font-size, 90px);   
+			width: 535px;
+			line-height: 1.2;
+			@include rem(margin-bottom, 70px);
+	    }
+
+	    @include respond-to(767px, max) {
+	    	max-width: 250px;
+	    }
 	}
 }

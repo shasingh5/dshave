@@ -4,18 +4,6 @@
 	color: #fff;
 	@include rem(padding, 100px 0 80px);
 
-	h1 {
-		@include rem(font-size, 32px);
-		font-weight: 700;
-		line-height: 1.2;
-		letter-spacing: 3px;
-		@include rem(margin-bottom, 20px);
-		text-align: center;
-		text-decoration: underline #f47920;
-		text-underline-position: under;
-		text-transform: uppercase;
-	}
-
 	p {
 		@include rem(font-size, 26px);
 		max-width: 885px;
@@ -28,6 +16,11 @@
 
 .services-list {
 	@include rem(margin-bottom, 30px);
+	@include respond-to(380px, 767px) {
+       max-width: 380px;
+       margin-left: auto;
+       margin-right: auto;
+    }
 	h3 {
 		@include rem(font-size, 28px);
 		text-transform: uppercase;
@@ -37,6 +30,7 @@
 		@include rem(margin-top, 30px);
 		text-align: center;		
 	}
+
 }
 
 .book-cta {

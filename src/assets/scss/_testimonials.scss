@@ -1,0 +1,50 @@
+.testimonials-sec {
+	position: relative;
+	background-color: #000;
+	color: #fff;
+	@include rem(padding, 100px 0 80px);
+}
+
+.testimonial-content {
+	@include rem(padding, 40px 50px);
+
+	h3 {
+		@include rem(font-size, 30px);
+		position: relative;
+		color: #ff8e25;
+		font-weight: 700;
+		line-height: 1.2;
+		letter-spacing: 3px;
+		@include rem(margin-top, 15px);
+		@include rem(padding-top, 15px);
+		text-align: center;		
+		text-transform: uppercase;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, 0);
+			width: 50px;
+			height: 5px;
+			background-color: #fff;
+		}
+	}
+
+	p {
+		@include rem(font-size, 26px);	
+		font-weight: 300;	
+		line-height: 1.4;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+.testimonial-list {
+@include respond-to(380px, 767px) {
+       max-width: 380px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+ }
