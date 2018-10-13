@@ -1,0 +1,39 @@
+.story {
+    .oscar-section {
+        h1 {
+            max-width: 760px;
+        }
+    }
+
+    .heading {
+        @include rem(margin-top, 30px);
+    }
+}
+
+.white-line {
+    border-right: 3px solid #fff;
+}
+
+.story, .services {
+    .barher-inner {
+        top: 50%;
+
+        @include vendor-prefixes(transform, translate(-50%, -50%));
+
+        h1 {   
+            @include rem(font-size, 80px);         
+            @include respond-to(769px) {
+               @include rem(font-size, 170px);
+            }
+        }
+    }
+}
+
+.booknow .barher-inner {
+    h1 {   
+        @include respond-to(769px) {
+           @include rem(font-size, 150px);
+           max-width: 1000px;
+        }
+    }
+}

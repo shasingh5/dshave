@@ -42,3 +42,36 @@
 	margin: 0 auto;
 	@include rem(margin-top, 50px);
 }
+
+.services {
+
+	.heading {
+		color: #231f20;
+		padding-bottom: 0;
+
+		span:after {
+			height: 4px;
+		}
+	}
+
+	.services-list h3 {
+		@include rem(font-size, 25px);	
+		letter-spacing: 0;
+	}
+
+}
+
+.offer-section {
+	@include rem(margin, 100px 0);
+
+	p {
+		@include rem(font-size, 26px);	
+		font-weight: 400;	
+		line-height: 1.4;
+		max-width: 890px;
+		margin: 0 auto;
+		text-align: center;
+		color: #231f20;
+		@include rem(margin-bottom, 70px);
+	}
+}

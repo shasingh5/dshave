@@ -1,0 +1,29 @@
+.barbers-list {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .heading span {
+        @include rem(padding-bottom, 8px);
+    }
+
+    .services-list {
+        text-align: center;
+
+        h2 {
+            @include rem(font-size, 30px);
+            font-weight: 700;
+            line-height: 1.2;
+            text-transform: uppercase;
+            @include rem(margin-top, 25px);
+        }
+    }
+}
+
+
+
+.services .barbers-list .services-list h3 {
+    @include rem(font-size, 28px);
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-top: 0;
+}

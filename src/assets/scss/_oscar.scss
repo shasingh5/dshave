@@ -1,6 +1,6 @@
 .oscar-section {
 	position: relative;
-	background: #aeafaf url('../img/silver-bg.jpg') 0 0 no-repeat;
+	background: #aeafaf url('../img/silver-bg.jpg') 0 0 repeat;
 	@include rem(padding, 55px 15px);
 	text-align: center;
 	@include respond-to(768px) {
@@ -10,14 +10,14 @@
 	h1, h3 {
 		@include rem(font-size, 30px);
 		font-weight: 700;
-		line-height: 1.15;
+		line-height: 1.4;
 		letter-spacing: 3px;		
-		text-shadow: 4px 3px 5px rgba(0, 0, 0, 0.5);
+		text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.5);
 		max-width: 580px;
 		margin: 0 auto;
-		color: #252122;
+		color: #1e1a1b;
 		@include respond-to(768px) {
-	       @include rem(font-size, 46px);
+	       @include rem(font-size, 40px);
 	    }
 	}
 
@@ -35,7 +35,7 @@
 		font-style: italic;
 		@include rem(margin-top, 15px);
 		@include respond-to(768px) {
-	       @include rem(margin-top, 70px);
+	       @include rem(margin-top, 0);
 	    }
 	}
 }

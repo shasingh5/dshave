@@ -1,0 +1,28 @@
+.address {
+	@include rem(padding-top, 60px);
+	text-align: left;
+
+	h4 {   
+        @include rem(font-size, 24px);         
+        font-weight: 700;
+        @include rem(margin-top, 25px);
+
+        &.light {
+        	font-weight: 400;
+        	line-height: 1.5;
+        }
+
+        a {
+        	color: #202020;
+        }
+    }
+
+    hr {
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+	    border: 0;
+	    border-top: 5px solid #f47920;
+	    width: 80px;
+	    margin-left: 0;
+	}
+}

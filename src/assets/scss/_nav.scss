@@ -12,6 +12,10 @@
         display: inline-block;
     }
 
+    a {
+        display: inline-block;
+    }
+
 }
 
 .nav {
@@ -33,7 +37,10 @@
 
             text-transform: uppercase;
             @include rem(padding, 0 6px);
-            @include respond-to(768px) {
+            @include respond-to(420px, 768px) {
+               @include rem(padding, 0 20px);
+            }
+            @include respond-to(769px) {
                @include rem(padding, 0 55px);
             }
 
@@ -47,7 +54,7 @@
                     content: '';
                     display: block;
                     position: absolute;
-                    bottom: 0;
+                    top: 50%;
                     left: 0;
                     height: 3px;
                     width: 100%;
@@ -55,6 +62,7 @@
                     transform-origin: right top;
                     transform: scale(0, 1);
                     transition: color 0.1s,transform 0.2s ease-out;
+                    opacity: 0.8;
                 }
 
                 &.active::before {

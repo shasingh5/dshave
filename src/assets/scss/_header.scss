@@ -30,7 +30,7 @@
 		@include rem(margin-bottom, 20px);
 		@include respond-to(768px) {
 	       @include rem(font-size, 90px);   
-			width: 535px;
+			max-width: 535px;
 			line-height: 1.2;
 			@include rem(margin-bottom, 70px);
 	    }

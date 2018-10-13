@@ -42,9 +42,14 @@
 }
 
 .testimonial-list {
-@include respond-to(380px, 767px) {
-       max-width: 380px;
-       margin-left: auto;
-       margin-right: auto;
-    }
+	text-align: center;
+	@include respond-to(380px, 767px) {
+	       max-width: 380px;
+	       margin-left: auto;
+	       margin-right: auto;
+	    }
+
+	img {
+		display: inline-block;
+	}
  }
