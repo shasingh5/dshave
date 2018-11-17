@@ -112,6 +112,21 @@ img {
     background-size: contain;
 }
 
+.services-slider, .work-slider {
+    .slick-prev, .slick-prev:hover, .slick-prev:focus {
+        left: -40px;
+        @include respond-to(1024px, max) {
+            left: 30px;
+        }
+    }
+    .slick-next, .slick-next:hover, .slick-next:focus {
+        right: -40px;   
+        @include respond-to(1024px, max) {
+            right: 30px;
+        }     
+    }
+}
+
 .btn {
     padding: 8px 50px;
 
