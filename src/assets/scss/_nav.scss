@@ -1,12 +1,14 @@
 .logo {
     background: #000 url("../img/header-bg.jpg") 0 0 no-repeat;
-    min-height: 130px;
+    min-height: 100px;
     text-align: center;
 
-    @include rem(padding, 28px 0);
+    @include rem(padding, 9px 0);
     @include respond-to(768px) {
-       min-height: 140px;
+        min-height: 140px;
+        @include rem(padding, 28px 0);
     }
+
 
     img {
         display: inline-block;
@@ -15,14 +17,15 @@
     a {
         display: inline-block;
     }
-
 }
 
 .nav {
-    background-color: #fff;    
+    background-color: #fff;
+
     @include respond-to(768px) {
-       min-height: 40px;
+        min-height: 40px;
     }
+
 
     ul {
         text-align: center;
@@ -34,22 +37,27 @@
             @include rem(font-size, 20px);
 
             font-weight: 500;
-
             text-transform: uppercase;
+
             @include rem(padding, 0 6px);
             @include respond-to(420px, 768px) {
-               @include rem(padding, 0 20px);
+                @include rem(padding, 0 20px);
             }
+
+
             @include respond-to(769px) {
-               @include rem(padding, 0 55px);
+                @include rem(padding, 0 55px);
             }
+
 
             a {
                 position: relative;
                 display: block;
                 color: #000000;
                 transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+
                 @include rem(padding, 10px 0);
+
                 &::before {
                     content: '';
                     display: block;
@@ -75,14 +83,52 @@
                 }
 
                 &:hover, &:focus {
-                  text-decoration: none;
+                    text-decoration: none;
                 }
             }
 
             &.active a::before {
-              background-color: #f47920;
-              transform-origin: left top;
-              transform: scale(1, 1);
+                background-color: #f47920;
+                transform-origin: left top;
+                transform: scale(1, 1);
+            }
+        }
+    }
+}
+
+.header {
+    background-color: #fff;    
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+    transition: all 0.3s ease;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+
+    .logo {
+        @include respond-to(768px) {
+            min-height: 72px;
+            float: left;
+            width: 140px;
+
+            @include rem(padding, 10px 20px);
+        }
+    }
+
+    .nav {
+        @include respond-to(768px) {
+            min-height: 40px;
+            float: right;            
+        }
+
+        ul {           
+            @include respond-to(768px) {
+                margin: 16px 0;         
             }
         }
     }

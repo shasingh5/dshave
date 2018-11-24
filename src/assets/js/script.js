@@ -65,4 +65,30 @@ $(function() {
             // instead of a settings object
         ]
     });
+
+    $(window).on('scroll', function(){
+        if($(window).scrollTop()>=95 && !$('.header').hasClass('sticky')){
+            $('.header').addClass('sticky'); 
+        }
+        else if($(window).scrollTop()<95 && $('.header').hasClass('sticky')){
+           $('.header').removeClass('sticky') 
+        }
+    });
+
+    $(window).scroll(function(event) {
+        var scrollTop = $(document).scrollTop();
+        if (scrollTop > 100) {
+            $(".scroll-btn").fadeIn(400);
+        } else {
+            $(".scroll-btn").fadeOut(400);
+        }
+    });
+    $(".scroll-btn").on('click', function(event) {
+        event.preventDefault();
+        $("html, body").animate({
+            scrollTop: 0
+        }, 800, function() {
+            $(".scroll-btn").fadeOut(400);
+        });
+    });
 });

@@ -307,3 +307,28 @@ img {
         transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     }
 }
+
+.scroll-btn {
+    position: fixed;
+    right: 15px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border: 1px solid #f47920;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 999999;
+    font-size: 30px;
+    text-align: center;
+
+    span {
+        color: #f47920;
+        display: inline-block;
+        margin-top: 4px;
+    }
+}

@@ -49,7 +49,7 @@
     text-align: center;
     
     @include respond-to(768px) {
-       text-align: right;
+       text-align: left;
        
     }
 }
