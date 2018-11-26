@@ -2,6 +2,7 @@
 	position: relative;
 	color: #fff;
 	border-bottom: 12px solid #f47920;
+	background-color: #000;
 }
 
 .barher-inner {
@@ -12,6 +13,10 @@
 	text-align: center;
 	@include respond-to(768px) {
        top: 160px;
+    }
+
+    @include respond-to(1024px, 1100px) {
+       top: 75px;
     }
 
 	img {
